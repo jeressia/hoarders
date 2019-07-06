@@ -11,8 +11,8 @@ class NewItem extends Component {
   render() {
     const singleLink = '/scat/12345';
     return (
-      <div className="Home">
-        <h1>Home</h1>
+      <div className="NewItem">
+        <h1>New Item</h1>
         <button className="btn btn-light" onClick={this.editEvent}>Edit a thing</button>
         <Link to={singleLink}>View Single</Link>
       </div>
