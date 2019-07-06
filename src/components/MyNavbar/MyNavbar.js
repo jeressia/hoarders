@@ -35,10 +35,10 @@ class MyNavbar extends React.Component {
         return (
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
+              <NavLink tag={RRNavLink} to='/home'>My Stuff</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/new'>New Stuff</NavLink>
+              <NavLink tag={RRNavLink} to='/new'>Add Stuff</NavLink>
             </NavItem>
             <NavItem>
               <NavLink onClick={this.logMeOut}>Logout</NavLink>
@@ -52,7 +52,7 @@ class MyNavbar extends React.Component {
     return (
       <div className="MyNavbar">
         <Navbar color="danger" dark expand="md">
-          <NavbarBrand href="/">Hoarders</NavbarBrand>
+          <NavbarBrand tag={RRNavLink} to='/home'>Hoarders</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}

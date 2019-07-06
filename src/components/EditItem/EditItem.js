@@ -12,7 +12,7 @@ class EditItem extends Component {
     const singleLink = '/scat/12345';
     return (
       <div className="Home">
-        <h1>Home</h1>
+        <h1>Edit</h1>
         <button className="btn btn-light" onClick={this.editEvent}>Edit a thing</button>
         <Link to={singleLink}>View Single</Link>
       </div>

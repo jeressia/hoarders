@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-class SingleItem extends Component {
-  editEvent = (e) => {
-    e.preventDefault();
-    const orderId = '12345';
-    this.props.history.push(`/edit/${orderId}`);
-  };
+import './SingleItem.scss';
 
+class SingleItem extends React.Component {
   render() {
-    const singleLink = '/scat/12345';
+    const { item } = this.props;
     return (
-      <div className="Home">
-        <h1>Home</h1>
-        <button className="btn btn-light" onClick={this.editEvent}>Edit a thing</button>
-        <Link to={singleLink}>View Single</Link>
+      <div className="col-12">
+        <div className="card" id={item.itemName}>
+            <div className="card-body">
+                <h5 className="card-title">{item.itemName}</h5>
+                <img className="card-img-top" src={item.itemImage} alt="Card cap"/>
+                <p className="card-text"><strong>{item.itemDescription}</strong></p>
+                </div>
+            </div>
       </div>
+      // </div>
     );
   }
 }
